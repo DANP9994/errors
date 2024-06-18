@@ -1,0 +1,77 @@
+mylist = [14, "hello", 967]
+# This will raise an IndexError because there is no element at index 6.
+# mylist[6]
+# Correct code:
+print(mylist[2])  # The last valid index in mylist is 2
+
+
+# Corrected imports (module names should be in lowercase)
+import pandas as pd
+import numpy as np
+
+# Example usage (optional):
+# df = pd.DataFrame()
+# array = np.array([1, 2, 3])
+
+
+# This will raise a SyntaxError due to missing parentheses
+# Print"python errors"
+# Correct code:
+print("python errors")
+
+
+mydictionnary = {True: "hello", False: "bye", '3': "python"}
+# This will raise a KeyError because the key 'True' as a string does not exist.
+# mydictionnary['True']
+# Correct code:
+print(mydictionnary[True])  # Accessing with the correct key type
+
+
+i = 14
+while i < 78:
+    print(i)  # This line needs to be indented correctly
+    i += 1
+
+it = iter([1, 2, 3])
+print(next(it))  # 1
+print(next(it))  # 2
+print(next(it))  # 3
+# This will raise a StopIteration because there are no more items
+# print(next(it))
+# Correct code: Handle the exception
+try:
+    print(next(it))
+except StopIteration:
+    print("No more items in the iterator")
+
+# This will raise a TypeError
+# '15' + 15
+# Correct code: Convert integer to string before concatenation
+print('15' + str(15))  # Output: '1515'
+# or if addition is intended
+print(15 + 15)  # Output: 30
+
+
+# This will raise a ValueError
+# int('python')
+# Correct code: Ensure the string can be converted to an integer
+# print(int('123'))  # This would work
+# or handle the exception
+try:
+    print(int('python'))
+except ValueError:
+    print("Cannot convert 'python' to an integer")
+
+# This will raise a NameError
+# print(python)
+# Correct code: Define the variable before using it
+python = "Python programming language"
+print(python)
+
+# This will raise a ZeroDivisionError
+# x = 19 / 0
+# Correct code: Ensure the denominator is not zero
+try:
+    x = 19 / 0
+except ZeroDivisionError:
+    print("Division by zero is not allowed")
